@@ -26,6 +26,7 @@ wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v${VER}.zip
 unzip fastqc_v${VER}.zip
 chmod 775 FastQC/fastqc
 mv FastQC/* /usr/local/bin
+mkdir -p /sys/fs/cgroup/memory/
 echo "9223372036854771712" > /sys/fs/cgroup/memory/memory.limit_in_bytes
 rm -rf fastqc_v${VER}.zip FastQC
 
